@@ -65,5 +65,5 @@ A Logistic Regression classification model was successfully implemented to predi
 
 
 
-This project was completed as part of the Machine Learning CIE 2 activity. Faculty reference and Machine Learning learning resources:
-https://github.com/Princy2129
+This project was completed as part of the Regression and Classification Algorithms (RCA)
+ CIE 2 activity. 
