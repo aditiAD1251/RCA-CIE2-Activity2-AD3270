@@ -110,10 +110,9 @@ The model estimated a 99.22% probability of recommendation.
 
 The repository contains the following project files:
 
-- `RCA ACT 2 CIE 2.ipynb` – Jupyter Notebook containing the complete implementation.
-- `Womens_Clothing_Selected_Features.csv` – Selected dataset.
-- `Activity2_Test_Predictions.csv` – Test predictions.
-- `Activity2_Threshold_Comparison.csv` – Threshold comparison results.
+- `RCA_ACT_II_CIE_2(AD3270).ipynb` – Jupyter Notebook containing the complete implementation.
+- `Womens Clothing E-Commerce Reviews.csv` – Selected dataset.
+- `Cleaned_Dataset.csv`- Cleaned dataset.
 - `README.md` – Project documentation.
 
 ## 8. Limitations and Ethical Considerations
