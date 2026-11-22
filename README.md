@@ -1,69 +1,163 @@
-# RCA CIE 2 – Logistic Regression
+# RCA CIE 2 – Activity 2: Binary Classification using Logistic Regression
 
-## Subject
-Regression and Classification Algorithms (RCA)
+## 1. Project Overview
 
-## Project Title
-**Women's Clothing Recommendation Prediction Using Logistic Regression**
+This project is submitted for Regression and Classification Algorithms (RCA), CIE 2 – Activity 2: Binary Classification Activity.
 
-## Activity Description
-This project is completed as part of the RCA CIE 2 activity. The objective is to implement a Logistic Regression classification model to predict whether a customer recommends a women's clothing product based on customer review information.
+The objective is to build and evaluate a Logistic Regression model that predicts whether a customer recommends a women's clothing product based on information recorded in the review.
 
-## Dataset and Source
-**Dataset:** Women's Clothing E-Commerce Reviews
+**Role:** Data Scientist analysing customer review recommendations.
 
-**Source:** [Kaggle – Women's E-Commerce Clothing Reviews](https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews)
+## 2. Dataset Information
 
-## Features and Target
+- **Dataset Name:** Women's E-Commerce Clothing Reviews
+- **Dataset Source:** Kaggle
+- **Dataset Link:** https://www.kaggle.com/datasets/nicapotato/womens-ecommerce-clothing-reviews
+- **Dataset Size:** 23,486 rows and 11 columns.
+
+### Selected Features
+
 **Input Features (X):**
 - Age
 - Rating
 - Positive Feedback Count
 
-**Target Variable (Y):**
-- Recommended IND (0 = Not Recommended, 1 = Recommended)
+**Target Variable (y):**
+- Recommended IND
 
-## Files Included
-1. `Activity_Logistic_Regression_Womens_Clothing_3_Features.ipynb`
-2. `Womens Clothing E-Commerce Reviews.csv`
-3. `Womens_Clothing_Cleaned.csv`
-4. `README.md`
+Target classes:
+- 0 – Not Recommended
+- 1 – Recommended
 
-## Work Completed
-- Imported the required Python libraries.
-- Loaded and explored the dataset.
-- Performed data preprocessing.
-- Selected three input features and one target variable.
-- Split the dataset into training and testing sets.
-- Implemented Logistic Regression.
-- Trained the model and generated predictions.
-- Evaluated the model using accuracy, precision, recall, F1-score and ROC-AUC.
-- Visualized the confusion matrix and ROC curve.
-- Tested the model using a new customer review.
+Each row represents one customer review.
 
-## Key Results
+## 3. Work Completed
 
-| Metric | Score |
+The following tasks have been performed in the Jupyter Notebook:
+
+1. Importing required Python libraries.
+2. Loading and understanding the dataset.
+3. Data inspection and exploratory data analysis.
+4. Checking missing values and duplicate records.
+5. Data cleaning and preprocessing.
+6. Selecting input features and target variable.
+7. Analysing class distribution.
+8. Splitting data into training, validation and testing sets.
+9. Understanding the sigmoid function.
+10. Building a Logistic Regression model.
+11. Model training and hyperparameter tuning.
+12. Predicting probabilities and class labels.
+13. Generating a confusion matrix.
+14. Evaluating model performance.
+15. Calculating classification metrics.
+16. Comparing the model with a majority-class baseline.
+17. Analysing different classification thresholds.
+18. Visualising model performance.
+19. Predicting a new example.
+20. Discussing limitations and conclusions.
+
+## 4. Methodology
+
+- **Algorithm:** Logistic Regression
+- **Preprocessing:** Median imputation and feature standardisation.
+- **Training Data:** 14,091 rows
+- **Validation Data:** 4,697 rows
+- **Testing Data:** 4,698 rows
+- **Selected Regularisation Parameter:** C = 0.01
+- **Decision Threshold:** 0.62
+
+A stratified split was used to maintain class proportions across the datasets.
+
+## 5. Model Evaluation Results
+
+The final Logistic Regression model achieved the following results on the test dataset:
+
+| Evaluation Metric | Result |
 |---|---:|
-| Accuracy | 93.38% |
-| Precision | 97.56% |
-| Recall | 94.30% |
-| F1-score | 95.91% |
-| ROC-AUC | 97.15% |
+| Accuracy | 93.68% |
+| Precision | 98.80% |
+| Recall | 93.45% |
+| Specificity | 94.73% |
+| F1-Score | 96.05% |
+| ROC-AUC | 0.9714 |
 
-## Technologies Used
+### Confusion Matrix
+
+- True Negative (TN): 791
+- False Positive (FP): 44
+- False Negative (FN): 253
+- True Positive (TP): 3610
+
+### Baseline Comparison
+
+The majority-class baseline achieved 82.23% test accuracy, whereas the Logistic Regression model achieved 93.68%.
+
+This indicates that Logistic Regression performs better than the majority-class baseline.
+
+## 6. Example Prediction
+
+For a new review with the following details:
+
+- Age = 28
+- Rating = 5
+- Positive Feedback Count = 2
+
+The model estimated a 99.22% probability of recommendation.
+
+**Predicted Class:** 1 – Recommended.
+
+## 7. Project Files
+
+The repository contains the following project files:
+
+- `RCA ACT 2 CIE 2.ipynb` – Jupyter Notebook containing the complete implementation.
+- `Womens_Clothing_Selected_Features.csv` – Selected dataset.
+- `Activity2_Test_Predictions.csv` – Test predictions.
+- `Activity2_Threshold_Comparison.csv` – Threshold comparison results.
+- `README.md` – Project documentation.
+
+## 8. Limitations and Ethical Considerations
+
+- The dataset may not represent all clothing customers.
+- The target classes are imbalanced.
+- The model identifies associations and does not establish causation.
+- Rating and positive feedback are review-related features.
+- Predictions are probability-based estimates and are not guaranteed outcomes.
+- The model should not be used as the sole basis for decisions affecting customers.
+
+## 9. Technologies Used
+
 - Python
-- Google Colab
+- Jupyter Notebook / Google Colab
 - Pandas
 - NumPy
 - Matplotlib
 - Seaborn
 - Scikit-learn
 
-## Conclusion
-A Logistic Regression classification model was successfully implemented to predict customer recommendations using three selected features. The model achieved 93.38% accuracy on the test dataset.
+## 10. Conclusion
 
+In this activity, Logistic Regression was implemented to solve a binary classification problem using the Women's E-Commerce Clothing Reviews dataset.
 
+The model was evaluated using accuracy, precision, recall, specificity, F1-score, ROC-AUC and a confusion matrix.
 
-This project was completed as part of the Regression and Classification Algorithms (RCA)
- CIE 2 activity. 
+The results demonstrate that Logistic Regression performed better than the majority-class baseline on the test dataset.
+
+This activity provided practical understanding of data preprocessing, classification, model evaluation, probability prediction and decision threshold selection.
+
+## 11. GitHub Submission Details
+
+**Student GitHub ID:**
+https://github.com/complexiota
+
+**Student Name:** Aditi Balasaheb Pawar
+
+**Roll Number:** AD3270
+
+**Class:** T.Y. B.Tech AI & DS
+
+**Division:** B
+
+---
+
+Submitted as part of CIE 2 – Regression and Classification Algorithms (Academic Year 2026–27).
